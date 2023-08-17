@@ -29,6 +29,8 @@ sudo apt update
 sudo apt install wget 
 # terminator
 sudo apt install terminator -y
+# tree
+sudo apt install tree
 
 #while read url; do
 #    wget $url
