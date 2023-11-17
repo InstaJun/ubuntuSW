@@ -61,6 +61,12 @@ sudo apt-get update | sudo apt install microsoft-edge-stable
 # if GPG error is showing: The following signatures couldn't be verified because the public key is not available: <xxxxxx>
 # using sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <xxxxxx> to solve the problem 
 
+# PCAN-view
+# Reference: https://www.peak-system.com/fileadmin/media/linux/index.htm
+divider "PCAN-View"
+wget -q http://www.peak-system.com/debian/dists/`lsb_release -cs`/peak-system.list -O- | sudo tee /etc/apt/sources.list.d/peak-system.list # install the file peak-system.list from the PEAK-System website
+wget -q http://www.peak-system.com/debian/peak-system-public-key.asc -O- | sudo apt-key add - # download and install the PEAK-System public key for apt-secure, so that the repository is trusted
+sudo apt-get install pcanview-ncurses
 
 divider "Wireshark" | sudo apt install wireshark -y # network analyse tool
 divider "keepass2"  | sudo apt install keepass2     # passwort management
