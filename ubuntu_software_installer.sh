@@ -29,7 +29,7 @@ divider(){
 # mkdir -p ~/$parentfolder/deb
 
 ## INSTALL
-sudo apt update
+sudo apt update && sudo apte upgrade
 # wget
 sudo apt install wget 
 # terminator
@@ -112,6 +112,9 @@ sudo rosdep init
 rosdep update
 
 # TAS-related debian packages
+
+
+# catkin_tools
 
 # ROS-related debian packages
 sudo apt install ros-$ROS_DISTRO-plotjuggler-ros
