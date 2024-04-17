@@ -39,6 +39,7 @@ sudo apt install tree
 # git
 sudo apt-get install git -y ## if not installed
 sudo add-apt-repository -y ppa:git-core/ppa
+sudo apt-get update
 sudo apt-get install git -y ## if already installed, just update
 
 divider "nmap"      | sudo apt install nmap -y      # network scan tool
