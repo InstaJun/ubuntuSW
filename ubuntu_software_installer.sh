@@ -37,8 +37,8 @@ sudo apt install terminator -y
 # tree
 sudo apt install tree
 # git
-sudo apt-get install git ## if not installed
-add-apt-repository ppa:git-core/ppa
+sudo apt-get install git -y ## if not installed
+sudo add-apt-repository -y ppa:git-core/ppa
 sudo apt-get install git -y ## if already installed, just update
 
 divider "nmap"      | sudo apt install nmap -y      # network scan tool
