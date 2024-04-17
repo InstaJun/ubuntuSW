@@ -36,6 +36,10 @@ sudo apt install wget
 sudo apt install terminator -y
 # tree
 sudo apt install tree
+# git
+sudo apt-get install git ## if not installed
+add-apt-repository ppa:git-core/ppa
+sudo apt-get install git -y ## if already installed, just update
 
 divider "nmap"      | sudo apt install nmap -y      # network scan tool
 divider "wipe"      | sudo apt install wipe -y      # delete file permanently, -r: recursion, -f: force delete, -i: display info
