@@ -46,6 +46,7 @@ divider "nmap"      | sudo apt install nmap -y      # network scan tool
 divider "wipe"      | sudo apt install wipe -y      # delete file permanently, -r: recursion, -f: force delete, -i: display info
 divider "net-tools" | sudo apt install net-tools    # net tools
 divider "systemd"   | sudo apt install systemd      # install systemctl package
+divider "jq"        | sudo apt install jq           # tool for parsing and manipulating JSON data in Linux
 
 #while read url; do
 #    wget $url
