@@ -41,6 +41,9 @@ sudo apt-get install git -y ## if not installed
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo apt-get update
 sudo apt-get install git -y ## if already installed, just update
+# git-lfs
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
 
 divider "nmap"      | sudo apt install nmap -y      # network scan tool
 divider "wipe"      | sudo apt install wipe -y      # delete file permanently, -r: recursion, -f: force delete, -i: display info
