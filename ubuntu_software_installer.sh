@@ -45,11 +45,11 @@ sudo apt-get install git -y ## if already installed, just update
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
 
-divider "nmap"      | sudo apt install nmap -y      # network scan tool
-divider "wipe"      | sudo apt install wipe -y      # delete file permanently, -r: recursion, -f: force delete, -i: display info
-divider "net-tools" | sudo apt install net-tools    # net tools
-divider "systemd"   | sudo apt install systemd      # install systemctl package
-divider "jq"        | sudo apt install jq           # tool for parsing and manipulating JSON data in Linux
+divider "nmap"      && sudo apt install nmap -y      # network scan tool
+divider "wipe"      && sudo apt install wipe -y      # delete file permanently, -r: recursion, -f: force delete, -i: display info
+divider "net-tools" && sudo apt install net-tools    # net tools
+divider "systemd"   && sudo apt install systemd      # install systemctl package
+divider "jq"        && sudo apt install jq           # tool for parsing and manipulating JSON data in Linux
 
 #while read url; do
 #    wget $url
@@ -69,7 +69,7 @@ sudo apt install code # or code-insiders
 sudo rm ./$debfolder/code_1.80.0-1688479026_amd64.deb
 # todo vscode plugin auto from cloud sync
 
-divider "Wireshark" | sudo apt install wireshark -y # network analyse tool
+divider "Wireshark" && sudo apt install wireshark -y # network analyse tool
 
 ## optional softwares
 
@@ -80,7 +80,7 @@ divider "EDGE"
 #sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 #sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
 #sudo rm microsoft.gpg
-#sudo apt-get update | sudo apt install microsoft-edge-stable 
+#sudo apt-get update && sudo apt install microsoft-edge-stable 
 # reference: https://chrisjean.com/fix-apt-get-update-the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-available/
 # if GPG error is showing: The following signatures couldn't be verified because the public key is not available: <xxxxxx>
 # using sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <xxxxxx> to solve the problem 
@@ -98,14 +98,15 @@ wget -q http://www.peak-system.com/debian/peak-system-public-key.asc -O- | sudo 
 sudo apt-get install pcanview-ncurses
 
 
-divider "keepass2"  | sudo apt install keepass2 -y     # passwort management
+divider "keepass2"  && sudo apt install keepass2 -y     # passwort management
                       wget https://raw.github.com/pfn/keepasshttp/master/KeePassHttp.plgx # download plugin KeePassHttp
                                                                                           # Reference: https://github.com/RoelVB/ChromeKeePass
                       sudo  mv KeePassHttp.plgx /usr/lib/keepass2
                       sudo apt-get install mono-mcs # added dependencies for KeePassHttp 
                                                     # Reference: https://github.com/pfn/keepasshttp/issues/242, https://github.com/kee-org/KeeFox/issues/148
                                                     
-
+divider "keepassxc" && sudo snap install keepassxc -y 
+sudo snap connect "keepassxc:raw-usb" "core:raw-usb" # Due to a Snap's isolation and security settings, must manually enable the raw-usb interface in order to use YubiKey. 
 
 ## ROS
 # Reference: http://wiki.ros.org/noetic/Installation/Ubuntu
@@ -113,7 +114,7 @@ divider "ROS"
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt install curl -y # if you haven't already installed curl
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-sudo apt update | sudo apt install ros-noetic-desktop-full -y
+sudo apt update && sudo apt install ros-noetic-desktop-full -y
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 sudo apt install python3-catkin-tools python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential 
