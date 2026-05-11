@@ -84,9 +84,9 @@ sudo snap install vlc
 # using sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <xxxxxx> to solve the problem 
 
 # https://askubuntu.com/questions/1454325/unable-to-install-edge-on-ubuntu-22-04
-wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_110.0.1587.41-1_amd64.deb?brand=M102
-mv microsoft-edge-stable_110.0.1587.41-1_amd64.deb?brand=M102 microsoft-edge-stable_110.0.1587.41-1_amd64.deb # rename
-sudo apt install ./microsoft-edge-stable_110.0.1587.41-1_amd64.deb
+# wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_110.0.1587.41-1_amd64.deb?brand=M102
+# mv microsoft-edge-stable_110.0.1587.41-1_amd64.deb?brand=M102 microsoft-edge-stable_110.0.1587.41-1_amd64.deb # rename
+# sudo apt install ./microsoft-edge-stable_110.0.1587.41-1_amd64.deb
 
 # PCAN-view
 # Reference: https://www.peak-system.com/fileadmin/media/linux/index.htm
