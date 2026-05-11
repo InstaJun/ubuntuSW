@@ -29,7 +29,7 @@ divider(){
 # mkdir -p ~/$parentfolder/deb
 
 ## INSTALL
-sudo apt update && sudo apte upgrade
+sudo apt update && sudo apt upgrade
 # wget
 sudo apt install wget 
 # terminator
@@ -39,8 +39,6 @@ sudo apt install tree
 # git
 sudo apt-get install git -y ## if not installed
 sudo add-apt-repository -y ppa:git-core/ppa
-sudo apt-get update
-sudo apt-get install git -y ## if already installed, just update
 # git-lfs
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
