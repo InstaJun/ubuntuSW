@@ -122,6 +122,22 @@ sudo apt install ros-$ROS_DISTRO-plotjuggler-ros
 #git config --global user.email "stefan.novakovich@gmail.com"
 #git config --global user.name "snovakovic"
 
+
+# Python related packages
+if ! command -v python3 >/dev/null 2>&1; then
+    sudo apt update
+    sudo apt install -y python3
+fi
+divider "tldr"
+
+if ! command -v pipx >/dev/null 2>&1; then
+    sudo apt update
+    sudo apt install -y pipx
+fi
+
+pipx ensurepath || true
+pipx install tldr
+
 echo -----------------------------------------------------------------------------------------------------
 echo -------------------------------Auto Installing Programs FINISHED-------------------------------------
 echo -----------------------------------------------------------------------------------------------------
