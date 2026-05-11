@@ -75,7 +75,7 @@ divider "Wireshark" && sudo apt install wireshark -y # network analyse tool
 
 sudo snap install vlc
 # EDGE
-divider "EDGE"
+# divider "EDGE"
 #wget https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 #sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 #sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
@@ -96,17 +96,7 @@ divider "PCAN-View"
 wget -q http://www.peak-system.com/debian/dists/`lsb_release -cs`/peak-system.list -O- | sudo tee /etc/apt/sources.list.d/peak-system.list # install the file peak-system.list from the PEAK-System website
 wget -q http://www.peak-system.com/debian/peak-system-public-key.asc -O- | sudo apt-key add - # download and install the PEAK-System public key for apt-secure, so that the repository is trusted
 sudo apt-get install pcanview-ncurses
-
-
-divider "keepass2"  && sudo apt install keepass2 -y     # passwort management
-                      wget https://raw.github.com/pfn/keepasshttp/master/KeePassHttp.plgx # download plugin KeePassHttp
-                                                                                          # Reference: https://github.com/RoelVB/ChromeKeePass
-                      sudo  mv KeePassHttp.plgx /usr/lib/keepass2
-                      sudo apt-get install mono-mcs # added dependencies for KeePassHttp 
-                                                    # Reference: https://github.com/pfn/keepasshttp/issues/242, https://github.com/kee-org/KeeFox/issues/148
-                                                    
-divider "keepassxc" && sudo snap install keepassxc -y 
-sudo snap connect "keepassxc:raw-usb" "core:raw-usb" # Due to a Snap's isolation and security settings, must manually enable the raw-usb interface in order to use YubiKey. 
+                                                
 
 ## ROS
 # Reference: http://wiki.ros.org/noetic/Installation/Ubuntu
