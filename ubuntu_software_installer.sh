@@ -36,6 +36,9 @@ sudo apt install wget
 # sudo apt install terminator -y
 sudo snap install ghostty --classic
 
+# install the zellij - a terminal workspace environment
+sudo snap install zellij --classic
+
 # tree
 sudo apt install tree
 # git
