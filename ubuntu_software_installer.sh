@@ -32,8 +32,10 @@ divider(){
 sudo apt update && sudo apt upgrade
 # wget
 sudo apt install wget 
-# terminator
-sudo apt install terminator -y
+# terminal emulator
+# sudo apt install terminator -y
+sudo snap install ghostty --classic
+
 # tree
 sudo apt install tree
 # git
